@@ -3,17 +3,22 @@
 <div class="container">
 
 <% @cocktails.each do |cocktail| %>
-  <div class="card">
-    <div class='card-img'>
-      <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+    <div class="card">
+      <div class='card-img'>
+        <% if cocktail.photo.attached? %>
+          <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+        <% else %>
+          <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" %>
+        <% end %>
+      </div>
+      <div class="card-description">
+        <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
+      </div>
+      <div class="remove">
+        <%= link_to 'remove cocktail', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+      </div>
     </div>
-    <div class="card-description">
-      <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-    </div>
-    <div class="remove">
-      <%= link_to 'remove cocktail', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
-    </div>
-  </div>
+      <%=  %>
 <% end %>
 
 </div>
