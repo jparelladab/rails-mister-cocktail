@@ -90,6 +90,7 @@ text-align: center;
 .container-show {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 .container-name-show {
   margin: 20px;
