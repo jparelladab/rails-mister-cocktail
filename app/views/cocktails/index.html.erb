@@ -1,32 +1,33 @@
-<div class='header'>CocktailsWord</div>
 
-<div class="container">
-
-<% @cocktails.each do |cocktail| %>
-    <div class="card">
-      <div class="image-container">
-        <% if cocktail.photo.attached? %>
-          <%= cl_image_tag cocktail.photo.key, class: 'card-image'%>
-        <% else %>
-          <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", class: 'card-image' %>
-        <% end %>
-      </div>
-      <div class="card-description">
-        <div class="product-description">
-          <h4><%= link_to cocktail.name, cocktail_path(cocktail), class: "product-description" %></h4>
-        </div>
-
-        <div class="remove">
-          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
-            <i class="fas fa-trash-alt"></i>
+<div class="container-index">
+  <% @cocktails.each do |cocktail| %>
+      <div class="card-index">
+        <div class="image-container">
+          <% if cocktail.photo.attached? %>
+            <%= cl_image_tag cocktail.photo.key, class: 'card-image'%>
+          <% else %>
+            <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", class: 'card-image' %>
           <% end %>
         </div>
-      </div>
-    </div>
-      <%=  %>
-<% end %>
+        <div class="card-description">
+          <div class="product-description">
+            <h4><%= link_to cocktail.name, cocktail_path(cocktail), class: "product-description" %></h4>
+          </div>
 
+          <div class="remove">
+            <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+              <i class="fas fa-trash-alt"></i>
+            <% end %>
+          </div>
+        </div>
+      </div>
+  <% end %>
 </div>
-<div class='text-below-cards'>
-<h4><%= link_to 'Add a new cocktail!', new_cocktail_path, class: 'button-add' %></h4>
+<div class= 'buttons'>
+  <div class='text-below-cards'>
+    <%= link_to 'Add a new cocktail!', new_cocktail_path, class: 'button-add' %>
+  </div>
+ <!--  <div class='text-below-cards'>
+    <%= link_to 'Bootstrap version!', cocktails_bootstrap_path, class: 'button-add' %>
+  </div> -->
 </div>

@@ -11,6 +11,13 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "cocktails"
+// @import "cocktails"
 
+.navbar-container {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  align-items: center;
+  font-size: 6vw;
+}
 

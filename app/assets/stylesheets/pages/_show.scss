@@ -1,0 +1,37 @@
+
+
+.image-show {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  object-fit: cover;
+}
+.container-show {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.container-name-show {
+  margin: 20px;
+
+}
+.container-image-show {
+  height: 400px;
+  width: 400px;
+  margin: 20px;
+}
+.container-ingredients-show {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  width: 400px;
+  margin: 20px;
+}
+.add-new-dose-show {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 20px;
+  width: 400px;
+  margin: 20px;
+}

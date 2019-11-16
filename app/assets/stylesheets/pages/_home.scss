@@ -1,1 +1,132 @@
 // Specific CSS for your home-page
+body {
+  // background: #F7F7F7;
+  background-image: url(http://coachalexkuhn.com/wp-content/uploads/2018/10/tropical-color-palette-invigorate-geko-for-12.png);
+  text-align: center;
+}
+
+.navbar-container {
+  height: 100px;
+  background-color: #011936;
+  justify-content: space-between;
+}
+.header-index {
+  text-align: center;
+  font-size: 50px;
+  margin: 20px auto;
+}
+
+.container-index {
+  display: flex;
+  align-items: space-evenly;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 40px auto;
+}
+
+.card-index {
+  height: 250px;
+  width: 200px;
+  border-radius: 5px;
+  margin: 10px;
+  background-color: #011936;
+}
+.image-container {
+  height: 200px;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.card-image {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+  object-fit: cover;
+
+}
+
+.card-description {
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-description {
+color: white;
+text-align: center;
+font-size: smaller;
+}
+
+.remove {
+margin: 10px;
+text-align: center;
+}
+
+.text-below-cards {
+  text-align: center;
+  margin: 30px;
+}
+
+.button-add {
+  background-color: #011936;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// .image-show {
+//   height: 100%;
+//   width: 100%;
+//   border-top-right-radius: 5px;
+//   border-top-left-radius: 5px;
+//   object-fit: cover;
+// }
+// .container-show {
+//   display: flex;
+//   justify-content: space-evenly;
+//   flex-wrap: wrap;
+// }
+// .container-name-show {
+//   margin: 20px;
+
+// }
+// .container-image-show {
+//   height: 400px;
+//   width: 400px;
+//   margin: 20px;
+// }
+// .container-ingredients-show {
+//   border: 1px solid black;
+//   border-radius: 5px;
+//   margin: 20px;
+//   width: 400px;
+//   margin: 20px;
+// }
+// .add-new-dose-show {
+//   border: 1px solid black;
+//   border-radius: 5px;
+//   margin: 20px;
+//   width: 400px;
+//   margin: 20px;
+// }
+
+// .container-new {
+//   border: 1px solid black;
+//   border-radius: 5px;
+//   margin: 20px;
+//   width: 500px;
+//   margin: 20px auto;
+//   text-align: center;
+//   padding: 10px;
+// }
+

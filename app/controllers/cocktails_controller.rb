@@ -5,6 +5,11 @@ class CocktailsController < ApplicationController
     @cocktails = Cocktail.all
   end
 
+  def bootstrap
+    @cocktails = Cocktail.all
+  end
+
+
   def show
     @dose = Dose.new
   end
@@ -47,5 +52,6 @@ class CocktailsController < ApplicationController
   def set_cocktail
     @cocktail = Cocktail.find(params[:id])
   end
+
 
 end
