@@ -1,26 +1,38 @@
-
-<h1>Cocktail name: </h1><%= @cocktail.name %>
+<div class="container-name-show">
+  <h1><%= @cocktail.name %></h1>
+</div>
+<div class="container-show">
+<div class="container-image-show">
  <% if @cocktail.photo.attached? %>
-      <%= cl_image_tag @cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+      <%= cl_image_tag @cocktail.photo.key, class: 'image-show' %>
     <% else %>
-       <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" %>
+       <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", class: 'image-show' %>
   <% end %>
+</div>
 
+  <div class="container-ingredients-show">
+    <h2>Doses</h2>
+    <div class="doses">
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li><%=  dose.description %><span> of </span> <%= dose.ingredient.name %>
+            <span>  </span>
+            <%= link_to 'Remove dose', dose_path(dose), method: :delete,
+              data: { confirm: "Are you sure?" }%>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <div class="add-new-dose-show">
+    <h4>Add a new dose to your Cocktail!</h4>
 
-<% @cocktail.doses.each do |dose| %>
-  <p><%=  dose.description %><span> of </span> <%= dose.ingredient.name %>
-    <span>  </span>
-    <%= link_to 'Remove dose', dose_path(dose), method: :delete,
-      data: { confirm: "Are you sure?" }%>
-  </p>
-<% end %>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.submit "Add", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
 
-<h4>Add a new dose to your Cocktail!</h4>
-
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.association :ingredient %>
-  <%= f.submit "Add a dose for your cocktail", class: "btn btn-primary" %>
-<% end %>
-
-<%= link_to 'Back to Index', root_path %>
+<%= link_to 'Back to Index', root_path, class: "btn btn-primary" %>

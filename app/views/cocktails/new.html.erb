@@ -1,6 +1,7 @@
-new.html.erb
-<%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Enter a name for you cocktail", class: "btn btn-primary" %>
-<% end %>
+<div class="container-new">
+  <%= simple_form_for [@cocktail] do |f| %>
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit "Add your cocktail", class: "btn btn-primary" %>
+  <% end %>
+</div>

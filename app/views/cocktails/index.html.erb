@@ -4,18 +4,23 @@
 
 <% @cocktails.each do |cocktail| %>
     <div class="card">
-      <div class='card-img'>
+      <div class="image-container">
         <% if cocktail.photo.attached? %>
-          <%= cl_image_tag cocktail.photo.key, height: 300, width: 400, crop: :fill %>
+          <%= cl_image_tag cocktail.photo.key, class: 'card-image'%>
         <% else %>
-          <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260" %>
+          <%= image_tag "https://images.pexels.com/photos/605408/pexels-photo-605408.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260", class: 'card-image' %>
         <% end %>
       </div>
       <div class="card-description">
-        <h4><%= link_to cocktail.name, cocktail_path(cocktail) %></h4>
-      </div>
-      <div class="remove">
-        <%= link_to 'remove cocktail', cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } %>
+        <div class="product-description">
+          <h4><%= link_to cocktail.name, cocktail_path(cocktail), class: "product-description" %></h4>
+        </div>
+
+        <div class="remove">
+          <%= link_to cocktail_path(cocktail), method: :delete, data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash-alt"></i>
+          <% end %>
+        </div>
       </div>
     </div>
       <%=  %>
@@ -23,5 +28,5 @@
 
 </div>
 <div class='text-below-cards'>
-<h4><%= link_to 'Add a new cocktail!', new_cocktail_path %></h4>
+<h4><%= link_to 'Add a new cocktail!', new_cocktail_path, class: 'button-add' %></h4>
 </div>
