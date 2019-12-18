@@ -10,16 +10,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render 'shared/navbar' %>
     <div class='navbar-container'>
       <i class="fas fa-globe-americas"></i>
-      <p>CocktailWorld</p>
+      <p>Mister Cocktail</p>
       <i class="fas fa-glass-martini-alt"></i>
     </div>
     <%= yield %>
     <%= javascript_include_tag "application" %> <!-- from app/assets/javascripts/application.js -->
     <%= javascript_pack_tag "application" %>    <!-- from app/javascript/packs/application.js -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
   </body>
 </html>

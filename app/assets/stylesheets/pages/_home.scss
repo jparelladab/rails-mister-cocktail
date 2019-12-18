@@ -130,3 +130,34 @@ text-align: center;
 //   padding: 10px;
 // }
 
+.home_video {
+ width: 100vw;
+ height: 100vh;
+ position: absolute;
+ display: flex;
+ justify-content: center;
+ object-fit: cover;
+ top: 0;
+ z-index: -2;
+}
+
+.home-video-wrapper {
+height: 100vh;
+display: flex;
+}
+
+h1.home {
+  color: white;
+}
+
+.get-cocktail-button {
+  position: absolute;
+  top: 87%;
+  font-size: 4vh;
+  right: 9%;
+  background-color: #011936;
+  padding: 1vw;
+  border-radius: 10px;
+  color: white;
+}
+
