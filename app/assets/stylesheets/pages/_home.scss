@@ -1,13 +1,19 @@
 // Specific CSS for your home-page
 body {
   // background: #F7F7F7;
-  background-image: url(http://coachalexkuhn.com/wp-content/uploads/2018/10/tropical-color-palette-invigorate-geko-for-12.png);
-  text-align: center;
+  // background-image: url(http://coachalexkuhn.com/wp-content/uploads/2018/10/tropical-color-palette-invigorate-geko-for-12.png);
+  // text-align: center;
+  margin: 0px;
 }
+html {
+  margin: 0px;
+}
+
+$primary-color: #011936;
 
 .navbar-container {
   height: 100px;
-  background-color: #011936;
+  background-color: $primary-color;
   justify-content: space-between;
 }
 .header-index {
@@ -29,7 +35,7 @@ body {
   width: 200px;
   border-radius: 5px;
   margin: 10px;
-  background-color: #011936;
+  background-color: $primary-color;
 }
 .image-container {
   height: 200px;
@@ -71,7 +77,7 @@ text-align: center;
 }
 
 .button-add {
-  background-color: #011936;
+  background-color: $primary-color;
   color: white;
   padding: 20px;
   border-radius: 5px;
@@ -84,61 +90,16 @@ text-align: center;
   justify-content: space-evenly;
 }
 
-// .image-show {
-//   height: 100%;
-//   width: 100%;
-//   border-top-right-radius: 5px;
-//   border-top-left-radius: 5px;
-//   object-fit: cover;
-// }
-// .container-show {
-//   display: flex;
-//   justify-content: space-evenly;
-//   flex-wrap: wrap;
-// }
-// .container-name-show {
-//   margin: 20px;
-
-// }
-// .container-image-show {
-//   height: 400px;
-//   width: 400px;
-//   margin: 20px;
-// }
-// .container-ingredients-show {
-//   border: 1px solid black;
-//   border-radius: 5px;
-//   margin: 20px;
-//   width: 400px;
-//   margin: 20px;
-// }
-// .add-new-dose-show {
-//   border: 1px solid black;
-//   border-radius: 5px;
-//   margin: 20px;
-//   width: 400px;
-//   margin: 20px;
-// }
-
-// .container-new {
-//   border: 1px solid black;
-//   border-radius: 5px;
-//   margin: 20px;
-//   width: 500px;
-//   margin: 20px auto;
-//   text-align: center;
-//   padding: 10px;
-// }
 
 .home_video {
  width: 100vw;
- height: 100vh;
- position: absolute;
+ // height: 100vh;
+ // position: absolute;
  display: flex;
  justify-content: center;
  object-fit: cover;
- top: 0;
- z-index: -2;
+ // top: 0;
+ // z-index: -2;
 }
 
 .home-video-wrapper {
@@ -155,9 +116,24 @@ h1.home {
   top: 87%;
   font-size: 4vh;
   right: 9%;
-  background-color: #011936;
+  background-color: $primary-color;
   padding: 1vw;
   border-radius: 10px;
   color: white;
+}
+
+.footer {
+  background-color: $primary-color;
+  height: 50px;
+  margin: 0px;
+  bottom: 0;
+  width: 100%;
+.logos {
+  display: flex;
+  justify-content: space-evenly;
+}
+  p {
+    margin-bottom: 0px;
+  }
 }
 
